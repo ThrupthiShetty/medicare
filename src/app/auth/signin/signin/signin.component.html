@@ -1,0 +1,235 @@
+
+    <!-- HOME -->
+
+    
+    <section id="singin" data-stellar-background-ratio="2.5">
+      <div class="container">
+        <div class="row">
+    
+          <div class="col-md-12 col-sm-12">
+            <!-- SECTION TITLE -->
+    
+            <div class="section-title wow fadeInUp" data-wow-delay="0.1s">
+              <h2>Welcome To Serenity HealthCare</h2>
+            </div>
+          </div>
+         
+          <form class="validate-form" [formGroup]="authForm" >
+             
+          <div id="adminsingin" class="col-md-4 col-sm-6">
+            <!-- NEWS THUMB -->
+            <div class="news-thumb wow fadeInUp" data-wow-delay="0.4s">
+    
+              <a href="news-detail.html">
+                <img src="assets/landing/images/news-image1.jpg" class="img-responsive" alt="">
+              </a>
+              <div class="news-info">
+                <!-- <span>March 08, 2018</span> -->
+    
+                <h3><a href="news-detail.html">Care Adminstrators</a></h3>
+                <p>Always striving to To promote the well-being and improve the health of our residents and guests.</p>
+                <div class="row">
+                  <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 mb-2">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                      <mat-label>Username</mat-label>
+                      <input matInput formControlName="adminusername" />
+                      <mat-icon matSuffix>face</mat-icon>
+                      <mat-error *ngIf="authForm.get('adminusername')">
+                        Username is required
+                      </mat-error>
+                    </mat-form-field>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xl-12col-lg-12 col-md-12 col-sm-12 mb-2">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                      <mat-label>Password</mat-label>
+                      <input matInput [type]="hide ? 'password' : 'text'" formControlName="password">
+                      <a class="show-pwd-icon" href="#" onClick="return false;" matSuffix (click)="hide = !hide"
+                        [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                      </a>
+                      <mat-error *ngIf="authForm.get('password')">
+                        Password is required
+                      </mat-error>
+                    </mat-form-field>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-between align-items-center mb-5">
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="checkbox" value=""> Remember me
+                      <span class="form-check-sign">
+                        <span class="check"></span>
+                      </span>
+                    </label>
+                  </div>
+                  <a class="txt1"  routerLink="signin">Forgot Password?</a>
+                </div>
+                <div *ngIf="error" class="alert alert-danger mt-3 mb-0">{{error}}</div>
+                <div class="container-auth-form-btn">
+                  <div style="text-align:center">
+                    <button mat-raised-button color="primary" [class.auth-spinner]="adminloading" [disabled]="adminloading"
+                      class="auth-form-btn" [disabled]="!authForm.valid " type="submit" (click)="adminLoginSet();">Admin
+                      Sign In</button>
+                  </div>
+                </div>
+    
+    
+              </div>
+            </div>
+          </div>
+    
+          <div id="docsingin" class="col-md-4 col-sm-6">
+          
+            <div class="news-thumb wow fadeInUp" data-wow-delay="0.6s">
+              <a href="news-detail.html">
+                <img src="assets/landing/images/news-image2.jpg" class="img-responsive" alt="">
+              </a>
+              <div class="news-info">
+              <h3><a href="news-detail.html">Physicians</a></h3>
+                <p>A day well spent when you works towards promote the well-being and improve the health of our residents and guests.</p>
+                <div class="row">
+                  <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 mb-2">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                      <mat-label>Username</mat-label>
+                      <input matInput formControlName="doctorusername" /> 
+                      <mat-icon matSuffix>face</mat-icon>
+                      <mat-error *ngIf="authForm.get('doctorusername')">
+                        Username is required
+                      </mat-error>
+                    </mat-form-field>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xl-12col-lg-12 col-md-12 col-sm-12 mb-2">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                      <mat-label>Password</mat-label>
+                      <input matInput [type]="hide ? 'password' : 'text'" formControlName="password">
+                      <a class="show-pwd-icon" href="#" onClick="return false;" matSuffix (click)="hide = !hide"
+                        [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                      </a>
+                      <mat-error *ngIf="authForm.get('password')">
+                        Password is required
+                      </mat-error>
+                    </mat-form-field>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-between align-items-center mb-5">
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="checkbox" value=""> Remember me
+                      <span class="form-check-sign">
+                        <span class="check"></span>
+                      </span>
+                    </label>
+                  </div>
+                  <a class="txt1" routerLink="/authentication/forgot-password">Forgot Password?</a>
+                </div>
+                <div *ngIf="error" class="alert alert-danger mt-3 mb-0">{{error}}</div>
+                <div class="container-auth-form-btn">
+                  <div style="text-align:center">
+                    <button mat-raised-button color="accent" [class.auth-spinner]="loading" [disabled]="loading"
+                      class="auth-form-btn" [disabled]="!authForm.valid " type="submit" (click)="adminLoginSet();">Physician
+                      Sign In</button>
+                  </div>
+                </div>
+    
+    
+    
+              </div>
+            </div>
+          </div>
+    
+          <div id="patinetsingin" class="col-md-4 col-sm-6">
+         
+            <div class="news-thumb wow fadeInUp" data-wow-delay="0.8s">
+              <a href="news-detail.html">
+                <img src="assets/landing/images/news-image3.jpg" class="img-responsive" alt="">
+              </a>
+              <div class="news-info">
+               
+                <h3><a href="news-detail.html">Patients</a></h3>
+                <p>Feel to be safe with a team who strive to  promote the well-being and improve the health of our residents and guests.</p>
+                <div class="row">
+                  <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 mb-2">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                      <mat-label>Username</mat-label>
+                      <input matInput formControlName="patientusername" /> 
+                      <mat-icon matSuffix>face</mat-icon>
+                      <mat-error *ngIf="authForm.get('patientusername')">
+                        Username is required
+                      </mat-error>
+                    </mat-form-field>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xl-12col-lg-12 col-md-12 col-sm-12 mb-2">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                      <mat-label>Password</mat-label>
+                      <input matInput [type]="hide ? 'password' : 'text'" formControlName="password">
+                      <a class="show-pwd-icon" href="#" onClick="return false;" matSuffix (click)="hide = !hide"
+                        [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                      </a>
+                      <mat-error *ngIf="authForm.get('password')">
+                        Password is required
+                      </mat-error>
+                    </mat-form-field>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-between align-items-center mb-5">
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="checkbox" value=""> Remember me
+                      <span class="form-check-sign">
+                        <span class="check"></span>
+                      </span>
+                    </label>
+                  </div>
+                  <a class="txt1" routerLink="/authentication/forgot-password">Forgot Password?</a>
+                </div>
+                <div *ngIf="error" class="alert alert-danger mt-3 mb-0">{{error}}</div>
+                <div class="container-auth-form-btn">
+                  <div style="text-align:center">
+                    <button mat-raised-button color="warn" [class.auth-spinner]="loading" [disabled]="loading"
+                      class="auth-form-btn" [disabled]="!authForm.valid " type="submit" (click)="patientLoginSet();">Patient
+                      Sign In</button>
+                  </div>
+                </div>
+    
+    
+    
+              </div>
+            </div>
+          </div>
+    </form>
+    
+    
+    <h6 class="social-login-title">OR</h6>
+    <ul class="list-unstyled social-icon mb-0 mt-3">
+      <li class="list-inline-item"><a href="javascript:void(0)" class="rounded">
+          <i class="fab fa-google"></i>
+        </a></li>
+      <li class="list-inline-item"><a href="javascript:void(0)" class="rounded flex-c-m">
+          <i class="fab fa-facebook-f"></i>
+        </a></li>
+      <li class="list-inline-item"><a href="javascript:void(0)" class="rounded">
+          <i class="fab fa-twitter"></i>
+        </a></li>
+      <li class="list-inline-item"><a href="javascript:void(0)" class="rounded">
+          <i class="fab fa-linkedin-in"></i>
+        </a></li>
+    </ul>
+          <!-- <div class="author">
+            <img src="assets/landing/images/author-image.jpg" class="img-responsive" alt="">
+            <div class="author-info">
+              <h5>Jeremie Carlson</h5>
+              <p>CEO / Founder</p>
+            </div>
+          </div> -->
+    
+        </div>
+      </div>
+    </section>
