@@ -8,11 +8,15 @@ import { SigninComponent } from './auth/signin/signin/signin.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SharedModule } from './shared/shared.module';
 import { HttpClientModule } from '@angular/common/http';
+import { NavbarComponent } from './components/common/navbar/navbar.component';
+import { SidebarComponent } from './components/common/sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SigninComponent
+    SigninComponent,
+    NavbarComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,

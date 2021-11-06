@@ -6,13 +6,11 @@
       <div class="container">
         <div class="row">
     
-          <div class="col-md-12 col-sm-12">
-            <!-- SECTION TITLE -->
-    
+          <!-- <div class="col-md-12 col-sm-12">    
             <div class="section-title wow fadeInUp" data-wow-delay="0.1s">
               <h2>Welcome To Serenity HealthCare</h2>
             </div>
-          </div>
+          </div> -->
          
           <form class="validate-form" [formGroup]="authForm" >
              
@@ -69,8 +67,8 @@
                 <div *ngIf="error" class="alert alert-danger mt-3 mb-0">{{error}}</div>
                 <div class="container-auth-form-btn">
                   <div style="text-align:center">
-                    <button mat-raised-button color="primary" [class.auth-spinner]="adminloading" [disabled]="adminloading"
-                      class="auth-form-btn" [disabled]="!authForm.valid " type="submit" (click)="adminLoginSet();">Admin
+                    <button mat-raised-button  [class.auth-spinner]="adminloading" [disabled]="adminloading"
+                      class="auth-form-btn btn-primary-red" [disabled]="!authForm.valid " type="submit" (click)="adminLoginSet();">Admin
                       Sign In</button>
                   </div>
                 </div>
@@ -130,8 +128,8 @@
                 <div *ngIf="error" class="alert alert-danger mt-3 mb-0">{{error}}</div>
                 <div class="container-auth-form-btn">
                   <div style="text-align:center">
-                    <button mat-raised-button color="accent" [class.auth-spinner]="loading" [disabled]="loading"
-                      class="auth-form-btn" [disabled]="!authForm.valid " type="submit" (click)="adminLoginSet();">Physician
+                    <button mat-raised-button  [class.auth-spinner]="loading" [disabled]="loading"
+                      class="auth-form-btn btn-primary-red" [disabled]="!authForm.valid " type="submit" (click)="adminLoginSet();">Physician
                       Sign In</button>
                   </div>
                 </div>
@@ -193,8 +191,8 @@
                 <div *ngIf="error" class="alert alert-danger mt-3 mb-0">{{error}}</div>
                 <div class="container-auth-form-btn">
                   <div style="text-align:center">
-                    <button mat-raised-button color="warn" [class.auth-spinner]="loading" [disabled]="loading"
-                      class="auth-form-btn" [disabled]="!authForm.valid " type="submit" (click)="patientLoginSet();">Patient
+                    <button mat-raised-button [class.auth-spinner]="loading" [disabled]="loading"
+                      class="auth-form-btn btn-primary-red" [disabled]="!authForm.valid " type="submit" (click)="patientLoginSet();">Patient
                       Sign In</button>
                   </div>
                 </div>
