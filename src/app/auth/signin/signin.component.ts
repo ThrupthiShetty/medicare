@@ -58,12 +58,12 @@ export class SigninComponent
 
   adminLoginSet(){
     this.adminSet();
+   console.log('admin login')
    
-   
-    //this.onSubmit(this.f.adminusername.value);
+   // this.onSubmit(this.f.adminusername.value);
  
   //  this.adminloading = false;
-  //this.router.navigate(["/admin/home/main"]);
+  this.router.navigate(["/admin/main/dashboard"]);
   
   }
 
@@ -82,6 +82,7 @@ export class SigninComponent
             
   }
   onSubmit(username:any) {
+                  this.router.navigate(["/admin/dashboard/view"]);
     // this.submitted = true;
     // this.loading = true;
     // this.adminloading = true;
