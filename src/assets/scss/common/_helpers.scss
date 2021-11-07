@@ -150,7 +150,8 @@
 
 @each $key, $val in $colors {
   .col-#{$key} {
-    color: $val !important;
+    background-color: $val !important;
+    color: #fff;
   }
 }
 @for $i from 0 through 100 {

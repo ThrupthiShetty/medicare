@@ -1,6 +1,7 @@
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
 import { DashboardComponent } from "./dashboard/dashboard.component";
+import { PatientProfileComponent } from "./patient-profile/patient-profile.component";
 // import { MainComponent } from "./main/main.component";
 // import { DashboardComponent as doctorDashboard } from "./../../doctor/dashboard/dashboard.component";
 // import { DashboardComponent as patientDashboard } from "./../../patient/dashboard/dashboard.component";
@@ -17,10 +18,10 @@ const routes: Routes = [
     path: "dashboard",
     component: DashboardComponent,
   },
-  // {
-  //   path: "dashboard",
-  //   component: DashboardComponent,
-  // },
+  {
+    path: "patient-profile",
+    component: PatientProfileComponent,
+  },
   // {
   //   path: "doctor-dashboard",
   //   component: doctorDashboard,

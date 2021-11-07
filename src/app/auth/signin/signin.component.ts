@@ -5,13 +5,14 @@ import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 // import { UnsubscribeOnDestroyAdapter } from "src/app/shared/UnsubscribeOnDestroyAdapter";
 import { Role } from "src/app/models/role";
 import { AuthService } from "src/app/core/services/auth.service";
+import { UnsubscribeOnDestroyAdapter } from "src/app/shared/UnsubscribeOnDestroyAdapter";
 @Component({
   selector: "app-signin",
   templateUrl: "./signin.component.html",
   styleUrls: ["./signin.component.scss"],
 })
 export class SigninComponent
-  // extends UnsubscribeOnDestroyAdapter
+  extends UnsubscribeOnDestroyAdapter
   implements OnInit
 {
   authForm!: FormGroup;
@@ -28,7 +29,7 @@ export class SigninComponent
     private router: Router,
     private authService: AuthService
   ) {
-    //super();
+    super();
   }
 
   ngOnInit() {
@@ -60,10 +61,9 @@ export class SigninComponent
     this.adminSet();
    console.log('admin login')
    
-   // this.onSubmit(this.f.adminusername.value);
+    this.onSubmit(this.authForm.controls['adminusername'].value);
  
   //  this.adminloading = false;
-  this.router.navigate(["/admin/main/dashboard"]);
   
   }
 
@@ -82,50 +82,49 @@ export class SigninComponent
             
   }
   onSubmit(username:any) {
-                  this.router.navigate(["/admin/dashboard/view"]);
-    // this.submitted = true;
-    // this.loading = true;
-    // this.adminloading = true;
-    // this.error = "";
-    // if (this.authForm.invalid) {
-    //   this.error = "Username and Password not valid !";
-    //   return;
-    // } else {
-    //   this.subs.sink = this.authService
-    //     .login(username, this.f.password.value)
-    //     .subscribe(
-    //       (res) => {
-    //         if (res) {
-    //           setTimeout(() => {
-    //             const role = this.authService.currentUserValue.role;
-    //             if (role === Role.All || role === Role.Admin) {
-    //               this.router.navigate(["/admin/home/main"]);
-    //             } else if (role === Role.Doctor) {
-    //               this.router.navigate(["/doctor/dashboard"]);
-    //             } else if (role === Role.Patient) {
-    //               this.router.navigate(["/patient/dashboard"]);
-    //             } else {
-    //               this.router.navigate(["/authentication/signin"]);
-    //             }
+    this.submitted = true;
+    this.loading = true;
+    this.adminloading = true;
+    this.error = "";
+    if (this.authForm.invalid) {
+      this.error = "Username and Password not valid !";
+      return;
+    } else {
+      this.subs.sink = this.authService
+        .login(username, this.authForm.controls['password'].value)
+        .subscribe(
+          (res) => {
+            if (res) {
+              setTimeout(() => {
+                const role = this.authService.currentUserValue.role;
+                if (role === Role.All || role === Role.Admin) {
+                  this.router.navigate(["/admin/main/dashboard"]);
+                } else if (role === Role.Doctor) {
+                  this.router.navigate(["/doctor/dashboard"]);
+                } else if (role === Role.Patient) {
+                  this.router.navigate(["/patient/dashboard"]);
+                } else {
+                  this.router.navigate(["/authentication/signin"]);
+                }
                
-    //           }, 1000);
-    //           this.loading = false;
+              }, 1000);
+              this.loading = false;
 
-    //            this.sleep(1000);
+               this.sleep(1000);
 
-    //           this.adminloading = false;
-    //         } else {
-    //           this.error = "Invalid Login";
-    //         }
-    //       },
-    //       (error) => {
-    //         this.error = error;
-    //         this.submitted = false;
-    //         this.loading = false;
-    //         this.adminloading = false;
-    //       }
-    //     );
-    // }
+              this.adminloading = false;
+            } else {
+              this.error = "Invalid Login";
+            }
+          },
+          (error) => {
+            this.error = error;
+            this.submitted = false;
+            this.loading = false;
+            this.adminloading = false;
+          }
+        );
+    }
   }
 
   sleep(ms:any) {

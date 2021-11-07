@@ -21,6 +21,7 @@ export class AuthService {
   }
 
   public get currentUserValue(): User {
+    console.log(this.loggedInUserSubject.value)
     return this.loggedInUserSubject.value;
   }
 

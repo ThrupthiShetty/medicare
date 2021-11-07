@@ -19,12 +19,17 @@
 // @import "fonts/fontawesome/regular.scss";
 // @import "fonts/fontawesome/solid.scss";
 // @import "fonts/fontawesome/brands.scss";
-
+@import "plugins/_carousel.scss";
+@import "plugins/_charts.scss";
+@import "plugins/_formwizard.scss";
+@import "plugins/_imagegallery.scss";
+@import "plugins/_maps.scss";
+@import "plugins/_tables.scss";
 
 @import "components/_inputformgroup.scss";
 @import "components/_formcomponents.scss";
-
-
+@import "components/_leftsidebaroverlay.scss";
+@import "ui/_card.scss";
 /*
  =========================================================
  * Black Dashboard Angular - v1.3.0
@@ -59,7 +64,7 @@
  @import "black-dashboard/bootstrap/images";
  @import "black-dashboard/bootstrap/code";
  @import "black-dashboard/bootstrap/grid";
- @import "black-dashboard/bootstrap/tables";
+//  @import "black-dashboard/bootstrap/tables";
  @import "black-dashboard/bootstrap/forms";
  @import "black-dashboard/bootstrap/buttons";
  @import "black-dashboard/bootstrap/transitions";
@@ -69,9 +74,9 @@
  @import "black-dashboard/bootstrap/custom-forms";
  @import "black-dashboard/bootstrap/nav";
  @import "black-dashboard/bootstrap/navbar";
- @import "black-dashboard/bootstrap/card";
+//  @import "black-dashboard/bootstrap/card";
  @import "black-dashboard/bootstrap/breadcrumb";
- @import "black-dashboard/bootstrap/pagination";
+//  @import "black-dashboard/bootstrap/pagination";
  @import "black-dashboard/bootstrap/badge";
  @import "black-dashboard/bootstrap/jumbotron";
  @import "black-dashboard/bootstrap/alert";
@@ -97,7 +102,7 @@
   @import "black-dashboard/custom/modal.scss";
   @import "black-dashboard/custom/navbar.scss";
 //   @import "black-dashboard/custom/type.scss";
-  @import "black-dashboard/custom/tables";
+  // @import "black-dashboard/custom/tables";
   @import "black-dashboard/custom/checkboxes-radio";
   @import "black-dashboard/custom/fixed-plugin";
   @import "black-dashboard/custom/sidebar-and-main-panel.scss";
@@ -117,7 +122,7 @@
  
  // Cards
  
- @import 'black-dashboard/custom/card';
+//  @import 'black-dashboard/custom/card';
  @import "black-dashboard/custom/cards/card-chart";
  @import "black-dashboard/custom/cards/card-map";
  @import "black-dashboard/custom/cards/card-user";
