@@ -3,6 +3,7 @@ import { Component, OnInit, ElementRef, OnDestroy } from "@angular/core";
 import { Location } from "@angular/common";
 import { Router } from "@angular/router";
 import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
+import { AuthService } from "src/app/core/services/auth.service";
 
 @Component({
   selector: "app-main-navbar",
@@ -24,6 +25,7 @@ export class MainNavbarComponent implements OnInit, OnDestroy {
     location: Location,
     private element: ElementRef,
     private router: Router,
+    private authService: AuthService,
     private modalService: NgbModal
   ) {
     this.location = location;
@@ -135,5 +137,13 @@ export class MainNavbarComponent implements OnInit, OnDestroy {
   }
   ngOnDestroy(){
      window.removeEventListener("resize", this.updateColor);
+  }
+
+  logout() {
+    this.authService.logout().subscribe((res) => {
+      if (!res.success) {
+        this.router.navigate(["/auth/signin"]);
+      }
+    });
   }
 }

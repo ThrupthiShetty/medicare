@@ -90,7 +90,7 @@ border-radius: 0">
               ngbDropdownToggle
             >
               <div class=" photo">
-                <img alt="Profile Photo" src="assets/img/anime3.png" />
+                <img alt="Profile Photo" src="assets/imgs/u/admin.jpg" />
               </div>
               <b class=" caret d-none d-lg-block d-xl-block"> </b>
               <p class=" d-lg-none">Log out</p>
@@ -108,7 +108,7 @@ border-radius: 0">
               </li>
               <li class=" dropdown-divider"></li>
               <li class=" nav-link">
-                <a class=" nav-item" href="javascript:void(0)" ngbDropdownItem>
+                <a class=" nav-item"(click)="logout()" ngbDropdownItem>
                   Log out
                 </a>
               </li>
