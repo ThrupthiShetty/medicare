@@ -30,6 +30,9 @@
 @import "components/_formcomponents.scss";
 @import "components/_leftsidebaroverlay.scss";
 @import "ui/_card.scss";
+@import "components/_infobox.scss";
+@import "apps/_task.scss";
+
 /*
  =========================================================
  * Black Dashboard Angular - v1.3.0
@@ -60,7 +63,7 @@
  
  @import "black-dashboard/bootstrap/root";
  @import "black-dashboard/bootstrap/reboot";
- @import "black-dashboard/bootstrap/type";
+//  @import "black-dashboard/bootstrap/type";
  @import "black-dashboard/bootstrap/images";
  @import "black-dashboard/bootstrap/code";
  @import "black-dashboard/bootstrap/grid";

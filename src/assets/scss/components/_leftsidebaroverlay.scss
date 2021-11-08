@@ -97,7 +97,7 @@
       li {
         &.active {
           .menu-top {
-            background-color: #f0f3fb;
+            background-color: black;
           }
           > :first-child {
             span {
@@ -225,7 +225,7 @@
       }
 
       a {
-        color: #000000;
+        color: white;
         position: relative;
         font-size: 14px;
         display: block;
@@ -238,7 +238,7 @@
         &:hover,
         &:active {
           text-decoration: none !important;
-          background-color: #f0f3fb;
+          background-color: black;
         }
 
         small {
@@ -249,7 +249,7 @@
 
         span {
           margin: 7px 0 7px 12px;
-          color: #333;
+          color: white;
           // font-weight: bold;
           font-size: 14px;
           overflow: hidden;

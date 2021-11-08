@@ -177,7 +177,7 @@ export class SidebarComponent implements OnInit {
         " " +
         this.authService.currentUserValue.lastName;
       this.userImg = this.authService.currentUserValue.img;
-
+      console.log(this.userFullName)
       this.sidebarItems = ROUTESBP.filter(
         (x) => x.role.indexOf(userRole) !== -1 || x.role.indexOf("All") !== -1
       );

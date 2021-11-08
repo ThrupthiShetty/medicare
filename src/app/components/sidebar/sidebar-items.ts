@@ -32,7 +32,7 @@ export const ROUTESBP: RouteInfo[] = [
   },
   {
     path: "",
-    title: "MENUITEMS.APPOINTMENTS.TEXT",
+    title: "appointment",
     moduleName: "appointment",
     iconType: "material-icons-two-tone",
     icon: "assignment",
@@ -45,7 +45,7 @@ export const ROUTESBP: RouteInfo[] = [
   },
   {
     path: "",
-    title: "MENUITEMS.DOCTORS.TEXT",
+    title: "DOCTORS",
     moduleName: "doctors",
     iconType: "material-icons-two-tone",
     icon: "supervised_user_circle",
@@ -58,7 +58,7 @@ export const ROUTESBP: RouteInfo[] = [
   },
   {
     path: "",
-    title: "MENUITEMS.STAFF.TEXT",
+    title: "STAFF",
     moduleName: "staff",
     iconType: "material-icons-two-tone",
     icon: "people_alt",
@@ -96,7 +96,7 @@ export const ROUTESBP: RouteInfo[] = [
   },
   {
     path: "",
-    title: "MENUITEMS.ROOMS.TEXT",
+    title: "ROOMS",
     moduleName: "room",
     iconType: "material-icons-two-tone",
     icon: "hotel",
@@ -109,7 +109,7 @@ export const ROUTESBP: RouteInfo[] = [
   },
   {
     path: "",
-    title: "MENUITEMS.PAYMENTS.TEXT",
+    title: "PAYMENTS",
     moduleName: "payment",
     iconType: "material-icons-two-tone",
     icon: "monetization_on",
@@ -124,7 +124,7 @@ export const ROUTESBP: RouteInfo[] = [
   // Doctor Modules
   {
     path: "/doctor/dashboard",
-    title: "MENUITEMS.DOCTOR.DASHBOARD",
+    title: "Doctor",
     moduleName: "dashboard",
     iconType: "material-icons-two-tone",
     icon: "home",
@@ -137,7 +137,7 @@ export const ROUTESBP: RouteInfo[] = [
   },
   {
     path: "/doctor/appointments",
-    title: "MENUITEMS.DOCTOR.APPOINTMENTS",
+    title: "Appointments",
     moduleName: "appointments",
     iconType: "material-icons-two-tone",
     icon: "assignment",
@@ -150,7 +150,7 @@ export const ROUTESBP: RouteInfo[] = [
   },
   {
     path: "/doctor/doctors",
-    title: "MENUITEMS.DOCTOR.DOCTORS",
+    title: "Doctors",
     moduleName: "doctors",
     iconType: "material-icons-two-tone",
     icon: "supervised_user_circle",
@@ -163,7 +163,7 @@ export const ROUTESBP: RouteInfo[] = [
   },
   {
     path: "/doctor/patients",
-    title: "MENUITEMS.DOCTOR.PATIENTS",
+    title: "Patients",
     moduleName: "patients",
     iconType: "material-icons-two-tone",
     icon: "face",
@@ -176,7 +176,7 @@ export const ROUTESBP: RouteInfo[] = [
   },
   {
     path: "/doctor/settings",
-    title: "MENUITEMS.DOCTOR.SETTINGS",
+    title: "Settings",
     moduleName: "settings",
     iconType: "material-icons-two-tone",
     icon: "settings",
@@ -189,7 +189,7 @@ export const ROUTESBP: RouteInfo[] = [
   },
   {
     path: "/apps/chat",
-    title: "MENUITEMS.DOCTOR.CHAT",
+    title: "Chat",
     moduleName: "apps",
     iconType: "material-icons-two-tone",
     icon: "chat",
@@ -203,7 +203,7 @@ export const ROUTESBP: RouteInfo[] = [
   // Patient Modules
   {
     path: "/patient/dashboard",
-    title: "MENUITEMS.PATIENT.DASHBOARD",
+    title: "Dashboard",
     moduleName: "dashboard",
     iconType: "material-icons-two-tone",
     icon: "home",
@@ -216,7 +216,7 @@ export const ROUTESBP: RouteInfo[] = [
   },
   {
     path: "",
-    title: "MENUITEMS.PATIENT.APPOINTMENTS.TEXT",
+    title: "Appointments",
     moduleName: "appointments",
     iconType: "material-icons-two-tone",
     icon: "assignment",
@@ -228,7 +228,7 @@ export const ROUTESBP: RouteInfo[] = [
     submenu: [
       {
         path: "/patient/appointments/today",
-        title: "MENUITEMS.PATIENT.APPOINTMENTS.LIST.TODAY",
+        title: "PATIENT.APPOINTMENTS.LIST.TODAY",
         moduleName: "appointments",
         iconType: "",
         icon: "",
@@ -241,7 +241,7 @@ export const ROUTESBP: RouteInfo[] = [
       },
       {
         path: "/patient/appointments/upcoming",
-        title: "MENUITEMS.PATIENT.APPOINTMENTS.LIST.UPCOMING",
+        title: "PATIENT.APPOINTMENTS.LIST.UPCOMING",
         moduleName: "appointments",
         iconType: "",
         icon: "",
@@ -254,7 +254,7 @@ export const ROUTESBP: RouteInfo[] = [
       },
       {
         path: "/patient/appointments/past",
-        title: "MENUITEMS.PATIENT.APPOINTMENTS.LIST.PAST",
+        title: "PATIENT.APPOINTMENTS.LIST.PAST",
         moduleName: "appointments",
         iconType: "",
         icon: "",
@@ -269,7 +269,7 @@ export const ROUTESBP: RouteInfo[] = [
   },
   {
     path: "/patient/prescriptions",
-    title: "MENUITEMS.PATIENT.PRESCRIPTIONS",
+    title: "Prescriptions",
     moduleName: "prescriptions",
     iconType: "material-icons-two-tone",
     icon: "receipt_long",
@@ -282,7 +282,7 @@ export const ROUTESBP: RouteInfo[] = [
   },
   {
     path: "/patient/records",
-    title: "MENUITEMS.PATIENT.MEDICAL-RECORD",
+    title: "Medical Records",
     moduleName: "records",
     iconType: "material-icons-two-tone",
     icon: "restore_page",
@@ -295,7 +295,7 @@ export const ROUTESBP: RouteInfo[] = [
   },
   {
     path: "/patient/billing",
-    title: "MENUITEMS.PATIENT.BILLING",
+    title: "Billing",
     moduleName: "records",
     iconType: "material-icons-two-tone",
     icon: "receipt",
@@ -308,7 +308,7 @@ export const ROUTESBP: RouteInfo[] = [
   },
   {
     path: "/apps/chat",
-    title: "MENUITEMS.PATIENT.CHAT",
+    title: "Chat",
     moduleName: "apps",
     iconType: "material-icons-two-tone",
     icon: "chat",
@@ -321,7 +321,7 @@ export const ROUTESBP: RouteInfo[] = [
   },
   {
     path: "/patient/settings",
-    title: "MENUITEMS.PATIENT.SETTINGS",
+    title: "Settings",
     moduleName: "settings",
     iconType: "material-icons-two-tone",
     icon: "settings",

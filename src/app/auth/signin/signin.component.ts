@@ -59,8 +59,7 @@ export class SigninComponent
 
   adminLoginSet(){
     this.adminSet();
-   console.log('admin login')
-   
+    console.log('admin login')
     this.onSubmit(this.authForm.controls['adminusername'].value);
  
   //  this.adminloading = false;
@@ -69,16 +68,16 @@ export class SigninComponent
 
   doctorLoginSet(){
     this.doctorSet();
-   // this.onSubmit(this.f.doctorusername.value);
-  // this.router.navigate(["/patient/dashboard"]);
+   this.onSubmit(this.authForm.controls['doctorusername'].value);
+  // this.router.navigate(["/doctor/dashboard"]);
             
   }
 
 
   patientLoginSet(){
     this.patientSet();
-   // this.onSubmit(this.f.patientusername.value);
- // this.router.navigate(["/patient/dashboard"]);
+    this.onSubmit(this.authForm.controls['patientusername'].value);
+    //this.router.navigate(["/patient/dashboard"]);
             
   }
   onSubmit(username:any) {
