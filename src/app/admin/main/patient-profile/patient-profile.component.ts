@@ -56,7 +56,7 @@ export class PatientProfileComponent  extends UnsubscribeOnDestroyAdapter implem
               console.log(res)
               setTimeout(() => {
                 this.claimsubmtting = false;
-                this.router.navigate(["/admin/patients/patient-profile"], { queryParams: { claimID: true, claimRefId: 13312 } });
+                this.router.navigate(["/admin/main/patient-profile"], { queryParams: { claimID: true, claimRefId: 13312 } });
                 // const role = Role.Admin ;
                 // //this.authService.currentUserValue.role;
                 // if (role === Role.All || role === Role.Admin) {
