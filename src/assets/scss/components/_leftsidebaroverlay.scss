@@ -104,6 +104,11 @@
               font-weight: 500;
             }
           }
+          .material-icons-two-tone {
+            vertical-align: middle;
+            filter: invert(43%) sepia(4%) saturate(19%) hue-rotate(342deg)
+              brightness(94%) contrast(88%);
+          }
         }
       }
 
@@ -178,8 +183,8 @@
 
       .material-icons-two-tone {
         vertical-align: middle;
-        filter: invert(43%) sepia(4%) saturate(19%) hue-rotate(342deg)
-          brightness(94%) contrast(88%);
+        // filter: invert(43%) sepia(4%) saturate(19%) hue-rotate(342deg)
+        //   brightness(94%) contrast(88%);
       }
 
       .active .menu-toggle {
@@ -238,7 +243,7 @@
         &:hover,
         &:active {
           text-decoration: none !important;
-          background-color: black;
+          background-color: gray;
         }
 
         small {

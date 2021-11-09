@@ -58,6 +58,7 @@ export class MainNavbarComponent implements OnInit, OnDestroy {
   }
 
   collapse() {
+    console.log(this.isCollapsed)
     this.isCollapsed = !this.isCollapsed;
     const navbar = document.getElementsByTagName("nav")[0];
     if (!this.isCollapsed) {
@@ -102,7 +103,66 @@ export class MainNavbarComponent implements OnInit, OnDestroy {
     this.sidebarVisible = false;
     html.classList.remove("nav-open");
   }
+  sidebarToggle() {
+    console.log('sidebar toggle')
+    // const toggleButton = this.toggleButton;
+    // const html = document.getElementsByTagName('html')[0];
+    var $toggle = document.getElementsByClassName("navbar-toggler")[0];
 
+    if (this.sidebarVisible === false) {
+      this.sidebarOpen();
+    } else {
+      this.sidebarClose();
+    }
+    const html = document.getElementsByTagName("html")[0];
+    var $layer = document.createElement("div");
+    console.log(this.mobile_menu_visible)
+    if (this.mobile_menu_visible == 1) {
+      // $('html').removeClass('nav-open');
+      html.classList.remove("nav-open");
+
+      if ($layer) {
+        $layer.remove();
+      }
+      setTimeout(function() {
+        $toggle.classList.remove("toggled");
+      }, 400);
+
+      this.mobile_menu_visible = 0;
+    } else {
+      setTimeout(function() {
+        $toggle.classList.add("toggled");
+      }, 430);
+
+      $layer.setAttribute("class", "close-layer");
+
+      if (html.querySelectorAll(".main-panel")) {
+        document.getElementsByClassName("main-panel")[0].appendChild($layer);
+      } else if (html.classList.contains("off-canvas-sidebar")) {
+        document
+          .getElementsByClassName("wrapper-full-page")[0]
+          .appendChild($layer);
+      }
+
+      setTimeout(function() {
+        $layer.classList.add("visible");
+      }, 100);
+
+      $layer.onclick = function() {
+        //asign a function
+        html.classList.remove("nav-open");
+        //this.mobile_menu_visible = 0;
+        $layer.classList.remove("visible");
+        setTimeout(function() {
+          $layer.remove();
+          $toggle.classList.remove("toggled");
+        }, 400);
+      }.bind(this);
+
+      html.classList.add("nav-open");
+      this.mobile_menu_visible = 1;
+    }
+  }
 
   getTitle() {
     var titlee = this.location.prepareExternalUrl(this.location.path());
@@ -146,4 +206,6 @@ export class MainNavbarComponent implements OnInit, OnDestroy {
   ngOnDestroy(){
      window.removeEventListener("resize", this.updateColor);
   }
+
+  
 }

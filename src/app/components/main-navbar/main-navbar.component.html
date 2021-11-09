@@ -3,7 +3,7 @@ border-radius: 0">
     <div class=" container-fluid">
       <div class=" navbar-wrapper">
         <div class=" navbar-toggle d-inline">
-          <button class=" navbar-toggler" type="button" >
+          <button class=" navbar-toggler" type="button" (click)="sidebarToggle()">
             <span class=" navbar-toggler-bar bar1"> </span>
             <span class=" navbar-toggler-bar bar2"> </span>
             <span class=" navbar-toggler-bar bar3"> </span>
@@ -19,9 +19,11 @@ border-radius: 0">
         </div>
       </div>
       <button
-        aria-label="Toggle navigation"
+        aria-label="Toggle navigation hh"
         class=" navbar-toggler"
-        [attr.aria-expanded]="!isCollapsed"
+        (click)="collapse()"
+
+        [attr.aria-expanded]="isCollapsed"
         aria-controls="collapseExample"
         id="navigation"
         type="button"
@@ -37,6 +39,8 @@ border-radius: 0">
               class=" btn btn-link"
               data-target="#searchModal"
               data-toggle="modal"
+              (click)="open(content)"
+
               id="search-button"
             >
               <i class=" fas fa-search"> </i>
@@ -134,10 +138,14 @@ border-radius: 0">
         class=" close"
         data-dismiss="modal"
         type="button"
+        (click)="modal.dismiss('Cross click')"
+
       >
         <i class=" tim-icons icon-simple-remove"> </i>
       </button>
     </div>
   
   </ng-template>
+
+  
   
